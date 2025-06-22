@@ -1,16 +1,16 @@
 @echo off
-set /p fname=Enter filename (without .cpp): 
+set /p fname=Enter filename (without .cpp):
 
-:: Compile
+:: Compile program
 g++ %fname%.cpp -o %fname%.exe
 
-:: Run
+:: Run program
 echo ------------------
 echo Running Output:
 echo ------------------
 %fname%.exe
 
-:: Git Add/Commit/Push
+:: Git commands
 git add .
 git commit -m "Added %fname% program"
 git push
