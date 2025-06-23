@@ -1,21 +1,13 @@
 #include <iostream>
 using namespace std;
 
-// Class declaration
-class SolidSquare {
-private:
-    int size;
-
+// Pattern class banaya
+class Pattern {
 public:
-    // Constructor to initialize size
-    SolidSquare(int n) {
-        size = n;
-    }
-
-    // Function to print the square pattern
-    void printPattern() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+    // Member function to print solid square pattern
+    void printSolidSquare(int n) {
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
                 cout << "*";
             }
             cout << endl;
@@ -23,15 +15,13 @@ public:
     }
 };
 
-// Main function
 int main() {
     int n;
-    cout << "Enter size of square: ";
+    cout << "Enter value of n: ";
     cin >> n;
 
-    // Create object and call method
-    SolidSquare square(n);
-    square.printPattern();
+    Pattern p;  // object banaya
+    p.printSolidSquare(n);  // method call kiya
 
     return 0;
 }
